@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>litratoholik — Media Kit 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #1A1A1A;
+    --white: #F5F5F5;
+    --gray: #8A8A8A;
+    --cyan: #00D4FF;
+    --dark: #111111;
+    --card: #222222;
+    --border: #2E2E2E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(17,17,17,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-brand span { color: var(--cyan); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--cyan); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 12vw, 140px);
+    letter-spacing: 8px;
+    line-height: 0.9;
+    color: var(--white);
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-name span { color: var(--cyan); }
+
+  .hero-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(20px, 4vw, 42px);
+    letter-spacing: 4px;
+    color: var(--gray);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.5s forwards;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--gray);
+    max-width: 560px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-desc strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.7s forwards;
+  }
+
+  .btn-primary {
+    padding: 14px 32px;
+    background: var(--cyan);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  .btn-secondary {
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.5px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .hero-scroll::before {
+    content: '';
+    width: 40px;
+    height: 0.5px;
+    background: var(--gray);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-full {
+    max-width: 100%;
+    background: var(--dark);
+    padding: 100px 0;
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 72px);
+    letter-spacing: 4px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 48px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--cyan);
+    margin-bottom: 48px;
+  }
+
+  /* STATS */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 0.5px solid var(--border);
+  }
+
+  .stat-item {
+    background: var(--dark);
+    padding: 48px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .stat-item:hover::before { transform: scaleX(1); }
+
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 80px);
+    color: var(--cyan);
+    letter-spacing: 2px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .stat-sub {
+    font-size: 10px;
+    color: #555;
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  /* PLATFORMS */
+  .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .platform-card {
+    background: var(--card);
+    border: 0.5px solid var(--border);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .platform-card:hover { border-color: var(--cyan); }
+
+  .platform-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .platform-card:hover::after { transform: scaleX(1); }
+
+  .platform-icon {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .platform-handle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .platform-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .platform-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .platform-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .platform-stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gray);
+    letter-spacing: 1px;
+  }
+
+  .platform-stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  /* CONTENT PILLARS */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .pillar-card {
+    background: var(--card);
+    border: 0.5px solid var(--border);
+    padding: 32px;
+    transition: border-color 0.2s;
+  }
+
+  .pillar-card:hover { border-color: var(--cyan); }
+
+  .pillar-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  .pillar-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .pillar-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .pillar-examples {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .pillar-example {
+    font-size: 11px;
+    color: var(--cyan);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .pillar-example::before { content: '→  '; }
+
+  /* WHAT I OFFER */
+  .offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .offer-card {
+    background: var(--card);
+    border: 0.5px solid var(--border);
+    padding: 28px 24px;
+    text-align: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .offer-card:hover {
+    border-color: var(--cyan);
+    background: #252525;
+  }
+
+  .offer-icon {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .offer-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .offer-desc {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* AUDIENCE */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 0.5px solid var(--border);
+    margin-bottom: 48px;
+  }
+
+  .audience-item {
+    background: var(--card);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .audience-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .audience-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  /* WHY ME */
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .why-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--card);
+    border: 0.5px solid var(--border);
+  }
+
+  .why-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .why-text h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .why-text p {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--dark);
+    padding: 100px 40px;
+    text-align: center;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .contact-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+  }
+
+  .contact-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    letter-spacing: 6px;
+    color: var(--white);
+    line-height: 0.9;
+    margin-bottom: 24px;
+  }
+
+  .contact-desc {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .contact-email {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 32px;
+    transition: opacity 0.2s;
+  }
+
+  .contact-email:hover { opacity: 0.7; }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social-link:hover { color: var(--cyan); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    border-top: 0.5px solid var(--border);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: var(--gray);
+  }
+
+  .footer-brand span { color: var(--cyan); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: #444;
+    letter-spacing: 1px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 20px 60px; }
+    section { padding: 60px 20px; }
+    .section-inner { padding: 0 20px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-section { padding: 60px 20px; }
+    footer { padding: 20px; flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">LITRATO<span>HOLIK</span></a>
+  <ul class="nav-links">
+    <li><a href="#numbers">Numbers</a></li>
+    <li><a href="#platforms">Platforms</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#collab">Collab</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <p class="hero-tag">Media Kit — 2026</p>
+  <h1 class="hero-name">LITRATO<span>HOLIK</span></h1>
+  <p class="hero-sub">Nintendo Creator — Philippines</p>
+  <p class="hero-desc">
+    Filipino Nintendo creator and tech reviewer making <strong>bold, opinionated content</strong> about Switch 2, gaming gear, and everything Nintendo — for the fans who actually care.
+  </p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Work With Me</a>
+    <a href="#numbers" class="btn-secondary">View Numbers</a>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</div>
+
+<!-- NUMBERS -->
+<div class="section-full" id="numbers">
+  <div class="section-inner">
+    <p class="section-tag fade-up">By the numbers</p>
+    <h2 class="section-title fade-up">The reach.</h2>
+  </div>
+  <div class="stats-grid fade-up">
+    <div class="stat-item">
+      <span class="stat-number" data-target="587325" data-format="views">587K+</span>
+      <span class="stat-label">Combined Monthly Views</span>
+      <p class="stat-sub">Instagram + Facebook</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">1.1M+</span>
+      <span class="stat-label">YouTube Lifetime Views</span>
+      <p class="stat-sub">Since 2022</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">9.8K+</span>
+      <span class="stat-label">Total Followers</span>
+      <p class="stat-sub">Across all platforms</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">101K</span>
+      <span class="stat-label">Single Reel Best</span>
+      <p class="stat-sub">Organic — zero paid</p>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORMS -->
+<section id="platforms">
+  <p class="section-tag fade-up">Where I create</p>
+  <h2 class="section-title fade-up">Platforms.</h2>
+  <div class="platforms-grid">
+
+    <div class="platform-card fade-up">
+      <span class="platform-icon">Instagram</span>
+      <span class="platform-handle">@litratoholik</span>
+      <div class="platform-stats">
+        <div class="platform-stat">
+          <span class="platform-stat-label">Followers</span>
+          <span class="platform-stat-value">3,030</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Monthly Views</span>
+          <span class="platform-stat-value">416K</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Best Reel</span>
+          <span class="platform-stat-value">101K</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Content Type</span>
+          <span class="platform-stat-value" style="font-size:13px; font-family:'Montserrat'; font-weight:600;">Reels + Carousels</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-card fade-up">
+      <span class="platform-icon">YouTube</span>
+      <span class="platform-handle">@litratoholik</span>
+      <div class="platform-stats">
+        <div class="platform-stat">
+          <span class="platform-stat-label">Subscribers</span>
+          <span class="platform-stat-value">1,600</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Lifetime Views</span>
+          <span class="platform-stat-value">1.1M+</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Since</span>
+          <span class="platform-stat-value">2022</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Content Type</span>
+          <span class="platform-stat-value" style="font-size:13px; font-family:'Montserrat'; font-weight:600;">Reviews + Shorts</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-card fade-up">
+      <span class="platform-icon">Facebook</span>
+      <span class="platform-handle">@litratoholik</span>
+      <div class="platform-stats">
+        <div class="platform-stat">
+          <span class="platform-stat-label">Followers</span>
+          <span class="platform-stat-value">1,700</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Monthly Views</span>
+          <span class="platform-stat-value">171K</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Period</span>
+          <span class="platform-stat-value">28 Days</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Content Type</span>
+          <span class="platform-stat-value" style="font-size:13px; font-family:'Montserrat'; font-weight:600;">Reels + Posts</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="platform-card fade-up">
+      <span class="platform-icon">TikTok</span>
+      <span class="platform-handle">@litratoholik</span>
+      <div class="platform-stats">
+        <div class="platform-stat">
+          <span class="platform-stat-label">Followers</span>
+          <span class="platform-stat-value">4,172</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Niche</span>
+          <span class="platform-stat-value" style="font-size:13px; font-family:'Montserrat'; font-weight:600;">Nintendo Gaming</span>
+        </div>
+        <div class="platform-stat">
+          <span class="platform-stat-label">Content Type</span>
+          <span class="platform-stat-value" style="font-size:13px; font-family:'Montserrat'; font-weight:600;">Short Videos</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AUDIENCE GEOGRAPHY -->
+<section>
+  <p class="section-tag fade-up">Who's watching</p>
+  <h2 class="section-title fade-up">Audience.</h2>
+
+  <div style="margin-bottom: 48px;">
+    <p style="font-size: 13px; color: var(--gray); margin-bottom: 32px; max-width: 560px; line-height: 1.8;" class="fade-up">
+      A Filipino creator with a <strong style="color: var(--white);">predominantly Western audience.</strong> 32% United States reach with significant European presence — rare for a Southeast Asian creator and highly valuable for global gaming brands.
+    </p>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <p style="font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px;" class="fade-up">Instagram Top Countries</p>
+    <div class="audience-grid fade-up">
+      <div class="audience-item">
+        <span class="audience-value">32%</span>
+        <span class="audience-label">United States</span>
+      </div>
+      <div class="audience-item">
+        <span class="audience-value">6.5%</span>
+        <span class="audience-label">Germany</span>
+      </div>
+      <div class="audience-item">
+        <span class="audience-value">5.4%</span>
+        <span class="audience-label">France</span>
+      </div>
+      <div class="audience-item">
+        <span class="audience-value">5.2%</span>
+        <span class="audience-label">Italy</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p style="font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px;" class="fade-up">YouTube Top Countries</p>
+    <div class="audience-grid fade-up">
+      <div class="audience-item">
+        <span class="audience-value">28.3%</span>
+        <span class="audience-label">Philippines</span>
+      </div>
+      <div class="audience-item">
+        <span class="audience-value">13.5%</span>
+        <span class="audience-label">United States</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT PILLARS -->
+<div class="section-full" id="content">
+  <div class="section-inner">
+    <p class="section-tag fade-up">What I make</p>
+    <h2 class="section-title fade-up">Content pillars.</h2>
+    <div class="pillars-grid">
+
+      <div class="pillar-card fade-up">
+        <div class="pillar-number">01</div>
+        <div class="pillar-title">Bold Nintendo Takes</div>
+        <p class="pillar-desc">Opinionated, confident content about Nintendo games, hardware, and culture. Not reviews — verdicts. Content that sparks conversation and drives shares.</p>
+        <div class="pillar-examples">
+          <span class="pillar-example">Hot takes on Switch 2</span>
+          <span class="pillar-example">Nintendo vs console war</span>
+          <span class="pillar-example">Game franchise deep dives</span>
+        </div>
+      </div>
+
+      <div class="pillar-card fade-up">
+        <div class="pillar-number">02</div>
+        <div class="pillar-title">Gaming Tech Reviews</div>
+        <p class="pillar-desc">Honest, technical reviews of gaming hardware and accessories. 1M+ YouTube views built on this. Credible, informed, and trusted by a tech-savvy audience.</p>
+        <div class="pillar-examples">
+          <span class="pillar-example">Switch 2 hardware breakdowns</span>
+          <span class="pillar-example">Accessory reviews and guides</span>
+          <span class="pillar-example">Setup tours and gear picks</span>
+        </div>
+      </div>
+
+      <div class="pillar-card fade-up">
+        <div class="pillar-number">03</div>
+        <div class="pillar-title">Game Compilations</div>
+        <p class="pillar-desc">Cinematic, beat-synced compilations of Nintendo's best games. The format that built 587K monthly views. Visually crafted with a Multimedia Arts background.</p>
+        <div class="pillar-examples">
+          <span class="pillar-example">Must-own exclusives</span>
+          <span class="pillar-example">Unreleased game previews</span>
+          <span class="pillar-example">Franchise celebration content</span>
+        </div>
+      </div>
+
+      <div class="pillar-card fade-up">
+        <div class="pillar-number">04</div>
+        <div class="pillar-title">PH Gaming Perspective</div>
+        <p class="pillar-desc">Nintendo content from a Filipino lens. A unique, authentic voice in the Southeast Asian gaming space — underrepresented and deeply passionate.</p>
+        <div class="pillar-examples">
+          <span class="pillar-example">Filipino gamer culture</span>
+          <span class="pillar-example">PH pricing and value takes</span>
+          <span class="pillar-example">Local gaming community</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- WHAT I OFFER -->
+<section id="collab">
+  <p class="section-tag fade-up">Let's work together</p>
+  <h2 class="section-title fade-up">What I offer.</h2>
+  <div class="offers-grid fade-up">
+    <div class="offer-card">
+      <span class="offer-icon">01</span>
+      <div class="offer-title">Dedicated Reel</div>
+      <p class="offer-desc">A full Instagram Reel built around your product — scripted, filmed, and edited to my proven format.</p>
+    </div>
+    <div class="offer-card">
+      <span class="offer-icon">02</span>
+      <div class="offer-title">Product Review</div>
+      <p class="offer-desc">Long-form YouTube review with honest, technical assessment. Trusted by a tech-literate gaming audience.</p>
+    </div>
+    <div class="offer-card">
+      <span class="offer-icon">03</span>
+      <div class="offer-title">Reel Integration</div>
+      <p class="offer-desc">Natural product placement within existing Nintendo content — authentic, not forced.</p>
+    </div>
+    <div class="offer-card">
+      <span class="offer-icon">04</span>
+      <div class="offer-title">Carousel Feature</div>
+      <p class="offer-desc">Educational or showcase carousel post — ideal for accessories, gear, and gaming tech.</p>
+    </div>
+    <div class="offer-card">
+      <span class="offer-icon">05</span>
+      <div class="offer-title">Multi-Platform</div>
+      <p class="offer-desc">Cross-platform campaigns spanning Instagram, YouTube, Facebook, and TikTok simultaneously.</p>
+    </div>
+    <div class="offer-card">
+      <span class="offer-icon">06</span>
+      <div class="offer-title">Event Coverage</div>
+      <p class="offer-desc">On-the-ground coverage of gaming events, store launches, and Nintendo activations in the Philippines.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 80px;">
+    <p class="section-tag fade-up">Why work with me</p>
+    <div class="why-grid fade-up">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-text">
+          <h4>Organic reach that converts</h4>
+          <p>587K monthly views with zero paid promotion. Every view earned through content quality — not ad spend.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-text">
+          <h4>Tech credibility + gaming passion</h4>
+          <p>1M+ YouTube views built on honest tech reviews. Audiences trust product recommendations from this channel.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-text">
+          <h4>Production quality</h4>
+          <p>Multimedia Arts background, DaVinci Resolve Studio, capture card, DJI Mic Mini — professional tools, professional output.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-text">
+          <h4>Global audience from the Philippines</h4>
+          <p>32% US audience, 17% European reach — a Filipino creator with genuinely global distribution. Rare, valuable, and growing fast.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <p class="contact-tag fade-up">Ready to collaborate</p>
+    <h2 class="contact-title fade-up">LET'S<br>TALK.</h2>
+    <p class="contact-desc fade-up">
+      Whether you're a gaming brand, accessory maker, or Nintendo-related company looking for authentic Filipino creator coverage — let's make something great together.
+    </p>
+    <a href="mailto:litratoholik@gmail.com" class="contact-email fade-up">LITRATOHOLIK@GMAIL.COM</a>
+    <div class="social-links fade-up">
+      <a href="https://instagram.com/litratoholik" class="social-link" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@litratoholik" class="social-link" target="_blank">YouTube</a>
+      <a href="https://tiktok.com/@litratoholik" class="social-link" target="_blank">TikTok</a>
+      <a href="https://facebook.com/litratoholik" class="social-link" target="_blank">Facebook</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">LITRATO<span>HOLIK</span></span>
+  <span class="footer-copy">© 2026 litratoholik.com — All rights reserved</span>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
