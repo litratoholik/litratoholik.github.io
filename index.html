@@ -151,6 +151,35 @@
     font-weight: 600;
   }
 
+  .hero-socials {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.65s forwards;
+  }
+
+  .hero-social-btn {
+    padding: 7px 16px;
+    background: transparent;
+    color: var(--gray);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.5px solid var(--border);
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .hero-social-btn:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+
   .hero-ctas {
     display: flex;
     gap: 16px;
@@ -722,6 +751,12 @@
   <p class="hero-desc">
     Filipino Nintendo creator and tech reviewer making <strong>bold, opinionated content</strong> about Switch 2, gaming gear, and everything Nintendo — for the fans who actually care.
   </p>
+  <div class="hero-socials">
+    <a href="https://instagram.com/litratoholik" class="hero-social-btn" target="_blank">Instagram</a>
+    <a href="https://facebook.com/litratoholik" class="hero-social-btn" target="_blank">Facebook</a>
+    <a href="https://youtube.com/@litratoholik" class="hero-social-btn" target="_blank">YouTube</a>
+    <a href="https://tiktok.com/@litratoholik" class="hero-social-btn" target="_blank">TikTok</a>
+  </div>
   <div class="hero-ctas">
     <a href="#contact" class="btn-primary">Work With Me</a>
     <a href="#numbers" class="btn-secondary">View Numbers</a>
