@@ -697,6 +697,11 @@
   }
 
   /* ANIMATIONS */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -751,17 +756,86 @@
   <p class="hero-desc">
     Filipino gaming and tech creator making <strong>bold, opinionated content</strong> about Switch 2, gaming gear, and everything Nintendo — for the fans who actually care.
   </p>
-  <div style="margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.62s forwards;">
-    <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;">Latest Review</p>
-    <div style="position:relative;width:100%;max-width:480px;border:0.5px solid var(--border);background:var(--dark);overflow:hidden;">
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-        <iframe
-          src="https://www.youtube.com/embed/GPdDM8_NUqU?rel=0&modestbranding=1&color=white"
-          title="Yoshi and the Mysterious Book Review — litratoholik"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+  <div style="margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.62s forwards;width:100%;max-width:600px;">
+    <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;">Content I've Created</p>
+    <div style="overflow:hidden;width:100%;position:relative;">
+      <div style="display:flex;gap:12px;animation:marquee 20s linear infinite;width:max-content;">
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/wsken.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">WSKEN</p>
+            <p style="font-size:8px;color:var(--gray);">Screen Protector</p>
+          </div>
+        </div>
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/machenike.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Machenike G3 V2</p>
+            <p style="font-size:8px;color:var(--gray);">Controller</p>
+          </div>
+        </div>
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/ff7-remake.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Remake</p>
+            <p style="font-size:8px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/ff7-rebirth.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Rebirth</p>
+            <p style="font-size:8px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/yoshi-review.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Yoshi Review</p>
+            <p style="font-size:8px;color:var(--gray);">YouTube Long Form</p>
+          </div>
+        </div>
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/collection.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Collection</p>
+            <p style="font-size:8px;color:var(--gray);">Nintendo Switch 2</p>
+          </div>
+        </div>
+
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/setup.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">RGB Setup</p>
+            <p style="font-size:8px;color:var(--gray);">Creator Setup</p>
+          </div>
+        </div>
+
+        <!-- Seamless loop duplicates -->
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/wsken.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">WSKEN</p>
+            <p style="font-size:8px;color:var(--gray);">Screen Protector</p>
+          </div>
+        </div>
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/machenike.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Machenike G3 V2</p>
+            <p style="font-size:8px;color:var(--gray);">Controller</p>
+          </div>
+        </div>
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/ff7-remake.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Remake</p>
+            <p style="font-size:8px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+        <div style="width:160px;height:100px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;background-image:url('images/ff7-rebirth.jpg');background-size:cover;background-position:center;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:8px;">
+            <p style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Rebirth</p>
+            <p style="font-size:8px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -786,28 +860,28 @@
   </div>
   <div class="stats-grid fade-up">
     <div class="stat-item">
-      <span class="stat-number" data-target="1407200" data-format="views">1.4M+</span>
+      <span class="stat-number" data-target="2054512" data-format="views">2M+</span>
       <span class="stat-label">Combined Monthly Views</span>
       <p class="stat-sub">Instagram + Facebook + TikTok</p>
     </div>
     <div class="stat-item">
-      <span class="stat-number">1.2M+</span>
+      <span class="stat-number">1.3M+</span>
       <span class="stat-label">YouTube Lifetime Views</span>
       <p class="stat-sub">Since 2022</p>
     </div>
     <div class="stat-item">
-      <span class="stat-number">11K+</span>
+      <span class="stat-number">11.7K+</span>
       <span class="stat-label">Total Followers</span>
       <p class="stat-sub">Across all platforms</p>
     </div>
     <div class="stat-item">
-      <span class="stat-number">254K+</span>
+      <span class="stat-number">302K+</span>
       <span class="stat-label">Single Reel Best</span>
       <p class="stat-sub">Organic — zero paid</p>
     </div>
   </div>
   <div class="section-inner" style="padding-top:16px;">
-    <p style="font-size:10px;color:#3A3A3A;letter-spacing:2px;text-align:right;font-family:'Montserrat',sans-serif;font-weight:500;">* All statistics as of June 11, 2026</p>
+    <p style="font-size:10px;color:#3A3A3A;letter-spacing:2px;text-align:right;font-family:'Montserrat',sans-serif;font-weight:500;">* All statistics as of June 21, 2026</p>
   </div>
 </div>
 
@@ -823,15 +897,15 @@
       <div class="platform-stats">
         <div class="platform-stat">
           <span class="platform-stat-label">Followers</span>
-          <span class="platform-stat-value">3,166</span>
+          <span class="platform-stat-value">3,387</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Monthly Views</span>
-          <span class="platform-stat-value">640K</span>
+          <span class="platform-stat-value">967K</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Best Reel</span>
-          <span class="platform-stat-value">254K+</span>
+          <span class="platform-stat-value">302K+</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Content Type</span>
@@ -846,11 +920,11 @@
       <div class="platform-stats">
         <div class="platform-stat">
           <span class="platform-stat-label">Subscribers</span>
-          <span class="platform-stat-value">1,653</span>
+          <span class="platform-stat-value">1,685</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Lifetime Views</span>
-          <span class="platform-stat-value">1.2M+</span>
+          <span class="platform-stat-value">1.3M+</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Since</span>
@@ -869,11 +943,11 @@
       <div class="platform-stats">
         <div class="platform-stat">
           <span class="platform-stat-label">Followers</span>
-          <span class="platform-stat-value">2,080</span>
+          <span class="platform-stat-value">2,420</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Monthly Views</span>
-          <span class="platform-stat-value">570K</span>
+          <span class="platform-stat-value">968K</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Best Content</span>
@@ -896,11 +970,11 @@
       <div class="platform-stats">
         <div class="platform-stat">
           <span class="platform-stat-label">Followers</span>
-          <span class="platform-stat-value">4,183</span>
+          <span class="platform-stat-value">4,191</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Monthly Views</span>
-          <span class="platform-stat-value">196K</span>
+          <span class="platform-stat-value">118K</span>
         </div>
         <div class="platform-stat">
           <span class="platform-stat-label">Niche</span>
@@ -1082,14 +1156,14 @@ Instagram Audience Demographics</p>
   <div style="background:var(--card);border:0.5px solid var(--border);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;" class="fade-up">
     <div>
       <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;">Accounts Reached — Instagram</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--white);letter-spacing:3px;line-height:1;">299,802</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--white);letter-spacing:3px;line-height:1;">485,787</p>
       <p style="font-size:11px;color:var(--gray);letter-spacing:2px;margin-top:4px;">Unique people in the last 30 days</p>
     </div>
     <div>
       <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;">Top 5 Reels — All Time</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:baseline;">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--cyan);letter-spacing:1px;">254K+</span>
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);letter-spacing:1px;">190K</span>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--cyan);letter-spacing:1px;">302K+</span>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);letter-spacing:1px;">254K</span>
         <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);letter-spacing:1px;">115K</span>
         <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);letter-spacing:1px;">113K</span>
         <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);letter-spacing:1px;">84K</span>
@@ -1199,7 +1273,7 @@ Instagram Audience Demographics</p>
         <div class="why-num">01</div>
         <div class="why-text">
           <h4>Organic reach that converts</h4>
-          <p>1.4M combined monthly views with zero paid promotion. Single Reel hitting 254K+ views, 3.6K shares and 164K unique viewers — organically. Every view earned through content quality, not ad spend.</p>
+          <p>2M+ combined monthly views with zero paid promotion. Single Reel hitting 302K+ views organically. Every view earned through content quality — not ad spend. — organically. Every view earned through content quality, not ad spend.</p>
         </div>
       </div>
       <div class="why-item">
@@ -1238,6 +1312,97 @@ Instagram Audience Demographics</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP OPPORTUNITIES -->
+<section id="partnerships" style="padding:100px 40px;background:#111;border-top:0.5px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <p class="section-tag fade-up">Open for collaborations</p>
+    <h2 class="section-title fade-up">Partnership<span style="color:var(--cyan);">Opportunities.</span></h2>
+    <p style="font-size:14px;color:var(--gray);max-width:600px;line-height:1.8;margin-bottom:60px;" class="fade-up">Available for gaming accessory reviews, tech product collaborations, and game review copies. Content is always honest, always original, and always delivered to an engaged Nintendo gaming audience across four platforms.</p>
+
+    <!-- Photo Marquee -->
+    <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:24px;" class="fade-up">Content I've Created</p>
+
+    <div style="overflow:hidden;width:100%;position:relative;margin-bottom:16px;" class="fade-up">
+      <div style="display:flex;gap:16px;animation:marquee 25s linear infinite;width:max-content;">
+
+        <!-- Marquee Item Template — replace src with actual image paths -->
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">WSKEN</p>
+            <p style="font-size:9px;color:var(--gray);">Screen Protector</p>
+          </div>
+        </div>
+
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Machenike G3 V2</p>
+            <p style="font-size:9px;color:var(--gray);">Controller Review</p>
+          </div>
+        </div>
+
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Remake</p>
+            <p style="font-size:9px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Rebirth</p>
+            <p style="font-size:9px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Yoshi Review</p>
+            <p style="font-size:9px;color:var(--gray);">YouTube Long Form</p>
+          </div>
+        </div>
+
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Physical Collection</p>
+            <p style="font-size:9px;color:var(--gray);">Nintendo Switch 2</p>
+          </div>
+        </div>
+
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">RGB Gaming Setup</p>
+            <p style="font-size:9px;color:var(--gray);">Creator Setup</p>
+          </div>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">WSKEN</p>
+            <p style="font-size:9px;color:var(--gray);">Screen Protector</p>
+          </div>
+        </div>
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">Machenike G3 V2</p>
+            <p style="font-size:9px;color:var(--gray);">Controller Review</p>
+          </div>
+        </div>
+        <div style="width:240px;height:160px;background:var(--card);border:0.5px solid var(--border);flex-shrink:0;overflow:hidden;position:relative;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase;">FF7 Remake</p>
+            <p style="font-size:9px;color:var(--gray);">Physical Unboxing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:11px;color:#333;letter-spacing:2px;text-align:center;margin-top:8px;">Photos coming soon — currently in production</p>
+
   </div>
 </section>
 
